@@ -1,0 +1,26 @@
+{
+  "name": "AppBackend",
+  "version": "1.0.0",
+  "description": "Backend aplicación móvil organizadora de tareas laborales y estudiantiles.",
+  "main": "app.js",
+  "dependencies": {
+    "mysql2": "^1.6.1",
+    "nodemon": "^1.18.4",
+    "sequelize": "^4.38.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianMof/AppBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastianMof/AppBackend/issues"
+  },
+  "homepage": "https://github.com/sebastianMof/AppBackend#readme"
+}
