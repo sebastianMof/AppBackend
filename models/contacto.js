@@ -2,17 +2,13 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-  const usuario = sequelize.define('usuario', {
-    rut: {
-        type: DataTypes.STRING,
+  const contacto = sequelize.define('contacto', {
+    id: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: false, //Para convertirlo en serial poner en true
         allowNull: false
      },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     nombre: {
         type: DataTypes.STRING,
         allowNull: false
@@ -28,16 +24,14 @@ module.exports = (sequelize, DataTypes) => {
           isEmail: true,
         }
     },
-    carrera: {
+    fono: {
         type: DataTypes.STRING,
         allowNull: false
     }
   });
 
-  usuario.associate = (models) => {
-        usuario.hasMany(models.proyecto); //Un usuario puede tener muchos proyectos
-        usuario.hasMany(models.curso); //Un usuario puede tener muchos cursos
-        usuario.hasMany(models.contacto); //Un usuario puede tener muchos contactos
-  }
-  return usuario;
+contacto.associate = (models) => {
+    contacto.belongsTo(models.usuario); //Pertenece a un usuario
+}
+    return contacto;
 };
