@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-  const proyecto = sequelize.define('proyecto', {
+  const actividad = sequelize.define('actividad', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -14,23 +14,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
     },
     descripcion: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
     fecha_inicio: {
         type: DataTypes.DATEONLY,
         allowNull: false
     },
-    fecha_fin: {
-        type: DataTypes.DATEONLY,
-        allowNull: false
+    fecha_fin:{
+      type: DataTypes.DATEONLY,
+      allowNull: false
     }
+
+    
   });
 
-  proyecto.associate = (models) => {
-        proyecto.hasMany(models.tarea); //Un proyecto puede tener muchas tareas
-        proyecto.hasMany(models.reunion); //Un proyecto puede tener muchas reuniones
-        proyecto.belongsTo(models.usuario); //Pertenece a un usuario
+  actividad.associate = (models) => {
+        actividad.belongsTo(models.curso); //Pertenece a un curso
   }
-  return proyecto;
+  return actividad;
 };
