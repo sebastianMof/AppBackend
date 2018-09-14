@@ -1,42 +1,8 @@
 {
   "development": {
-    "database": "AppBackend",
-    "dialect": "mysql",
-    "logging": false,
-    "pool": {
-      "max": 5,
-      "min": 0,
-      "acquire": 30000,
-      "idle": 10000
-    },
-    "storage": "db.sql"
-  },
-  "test": {
-    "database": "AppBackend",
-    "dialect": "mysql",
-    "logging": false,
-    "pool": {
-      "max": 5,
-      "min": 0,
-      "acquire": 30000,
-      "idle": 10000
-    },
-    "storage": "db.sql"
-  },
-  "production": {
-    "database": "AppBackend",
-    "dialect": "mysql",
-    "logging": false,
-    "pool": {
-      "max": 5,
-      "min": 0,
-      "acquire": 30000,
-      "idle": 10000
-    },
-    "storage": "db.sql"
-  },
-  "start": {
-    "database": "AppBackend",
+    "database": "appmovil",
+    "username":"root",
+    "password": "password",
     "dialect": "mysql",
     "logging": false,
     "pool": {
